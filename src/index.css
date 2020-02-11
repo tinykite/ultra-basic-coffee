@@ -23,3 +23,8 @@
     url('./fonts/Nostrav1.0-Sett.eot') format('eot');
   font-style: normal;
 }
+
+body {
+  font-family: 'Nostra Sett';
+  color: magenta;
+}
