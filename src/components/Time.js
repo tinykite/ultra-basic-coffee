@@ -5,13 +5,6 @@ import { StyledScrollContainer } from './GlobalStyledComponents';
 import { getScrollThresholds } from '../helpers/animation';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
-const BottomWave = styled(motion.svg)`
-  background: #ffffff;
-  width: 100%;
-  height: auto;
-  margin-top: 24px;
-`;
-
 const Main = styled(motion.div)`
   display: grid;
   margin: 0 auto;
@@ -351,56 +344,8 @@ const Time = () => {
           </StoryItem>
         </Story>
       </Main>
-      <BottomWave
-        xmlns="http://www.w3.org/2000/svg"
-        width="1440"
-        height="115"
-        viewBox="0 0 1440 115"
-      >
-        <path
-          fill="#394419"
-          fillRule="evenodd"
-          stroke="none"
-          strokeWidth="1"
-          d="M1440 0v114.084C1289.964 106.687 1277.001 57 1102.99 57c-188.006 0-188.006 58-376.012 58-187.998 0-187.998-58-375.994-58C171.722 57 163.385 109.738 0 114.636V0h1440z"
-        ></path>
-      </BottomWave>
     </StyledScrollContainer>
   );
 };
-
-// const Technique = () => {
-//   return (
-//     <ScrollContainer background={'#000'}>
-//       <Main>
-//         {/* <Illustration>{illustration}</Illustration> */}
-//         <Title>Strength</Title>
-//         <Story>
-//           <StoryItem>
-//             In high school I thought that strong coffee was the kind
-//             of thing that punched you in the face and made you speak
-//             like a Hemingway novel.
-//           </StoryItem>
-//           <StoryItem>
-//             And to credit my heart-on-sleeve teenage self, it does
-//             heavily influence our perception of flavor. But the term
-//             doesn't accurately qualify how aggressively macho (or even
-//             how long) something was brewed.{' '}
-//           </StoryItem>
-//           <StoryItem>
-//             Strength is predominantly determined, before brewing, by
-//             the ratio of coffee to hot water that you use: and for
-//             adequately "strong" coffee, coffee educators typically
-//             recommend staying between 1:15 and 1:17.
-//           </StoryItem>
-//           <StoryItem>
-//             For 8oz of coffee (using a 1:15 ratio), that means a dose
-//             of approximately ~15 grams of beans.
-//           </StoryItem>
-//         </Story>
-//       </Main>
-//     </ScrollContainer>
-//   );
-// };
 
 export default Time;

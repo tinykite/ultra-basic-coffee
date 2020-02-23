@@ -5,14 +5,6 @@ import { StyledScrollContainer } from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
-const WaveTop = styled(motion.svg)`
-  width: 100%;
-  height: auto;
-  background: white;
-  position: relative;
-  top: 1px; /* TODO: Fix subpixel rendering in Firefox */
-`;
-
 const Main = styled(motion.article)`
   width: 90%;
   margin: 0 auto;
@@ -195,16 +187,6 @@ const Aeropress = ({ title = 'Aeropress' }) => {
 
   return (
     <>
-      <WaveTop
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 115"
-      >
-        <path
-          fill="#19224F"
-          fillRule="evenodd"
-          d="M0 0c187.992 0 165.992 58 353.984 58C541.98 58 541.98 0 729.978 0c188.006 0 188.006 58 376.011 58C1293.995 58 1251.995 0 1440 0v115H0V0z"
-        ></path>
-      </WaveTop>
       <StyledScrollContainer ref={ref} background={'#19224f'}>
         <Main>
           <Title fontStack="Barbour" style={{ opacity }}>

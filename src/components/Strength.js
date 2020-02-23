@@ -146,16 +146,6 @@ const Strength = () => {
 
   return (
     <StyledScrollContainer background={'#000000'}>
-      <WaveTop
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 115"
-      >
-        <path
-          fill="#1"
-          fillRule="evenodd"
-          d="M0 0c187.992 0 165.992 58 353.984 58C541.98 58 541.98 0 729.978 0c188.006 0 188.006 58 376.011 58C1293.995 58 1251.995 0 1440 0v115H0V0z"
-        ></path>
-      </WaveTop>
       <Main ref={opacityRef} style={{ opacity: position }}>
         <Illustration>
           <IllustrationItem
@@ -347,20 +337,6 @@ const Strength = () => {
           </StoryItem>
         </Story>
       </Main>
-      <BottomWave
-        xmlns="http://www.w3.org/2000/svg"
-        width="1440"
-        height="115"
-        viewBox="0 0 1440 115"
-      >
-        <path
-          fill="#000"
-          fillRule="evenodd"
-          stroke="none"
-          strokeWidth="1"
-          d="M1440 0v114.084C1289.964 106.687 1277.001 57 1102.99 57c-188.006 0-188.006 58-376.012 58-187.998 0-187.998-58-375.994-58C171.722 57 163.385 109.738 0 114.636V0h1440z"
-        ></path>
-      </BottomWave>
     </StyledScrollContainer>
   );
 };

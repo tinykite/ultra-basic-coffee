@@ -5,21 +5,6 @@ import { getScrollThresholds } from '../helpers/animation';
 import { StyledScrollContainer } from './GlobalStyledComponents';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
-const WaveTop = styled(motion.svg)`
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: -1px;
-  background: #ffffff 1440px 50px no-repeat;
-`;
-
-const BottomWave = styled(motion.svg)`
-  background: #ffffff;
-  width: 100%;
-  height: auto;
-  margin-top: 24px;
-`;
-
 const Main = styled(motion.article)`
   width: 80%;
   padding-top: 50px;
@@ -129,16 +114,6 @@ const Tips = () => {
 
   return (
     <StyledScrollContainer background={'#2b3257'}>
-      <WaveTop
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 115"
-      >
-        <path
-          fill="#2B3257"
-          fillRule="evenodd"
-          d="M0 0c187.992 0 165.992 58 353.984 58C541.98 58 541.98 0 729.978 0c188.006 0 188.006 58 376.011 58C1293.995 58 1251.995 0 1440 0v115H0V0z"
-        ></path>
-      </WaveTop>
       <Main ref={ref} style={{ opacity }}>
         <Tip>
           {' '}
@@ -169,20 +144,6 @@ const Tips = () => {
           </a>
         </Tip>
       </Main>
-      <BottomWave
-        xmlns="http://www.w3.org/2000/svg"
-        width="1440"
-        height="115"
-        viewBox="0 0 1440 115"
-      >
-        <path
-          fill="#2B3257"
-          fillRule="evenodd"
-          stroke="none"
-          strokeWidth="1"
-          d="M1440 0v114.084C1289.964 106.687 1277.001 57 1102.99 57c-188.006 0-188.006 58-376.012 58-187.998 0-187.998-58-375.994-58C171.722 57 163.385 109.738 0 114.636V0h1440z"
-        ></path>
-      </BottomWave>
     </StyledScrollContainer>
   );
 };
