@@ -5,6 +5,9 @@ import Interstitial from './components/Interstitial';
 import Aeropress from './components/Aeropress';
 import KalitaWave from './components/KalitaWave';
 import FrenchPress from './components/FrenchPress';
+import Strength from './components/Strength';
+import Time from './components/Time';
+import Grind from './components/Grind';
 
 function App() {
   return (
@@ -12,14 +15,13 @@ function App() {
       <Hero />
       <Introduction />
       <Interstitial title="Brew Methods" icon="Tools" />
-      <Aeropress
-        title="Aeropress"
-        fontStack="Barbour"
-        background="#19224f"
-      />
+      <Aeropress />
       <KalitaWave />
       <FrenchPress />
       <Interstitial title="Technique" icon="Technique" />
+      <Strength />
+      <Time />
+      <Grind />
     </>
   );
 }

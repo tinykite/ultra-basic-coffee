@@ -1,12 +1,9 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
+import { getScrollThresholds } from '../helpers/animation';
+import { StyledScrollContainer } from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-
-const ScrollContainer = styled.div`
-  background: ${props => props.background};
-  margin: 0 auto;
-`;
 
 const Main = styled(motion.article)`
   width: 90%;
@@ -167,11 +164,7 @@ const BottomWave = styled(motion.svg)`
 
 const FrenchPress = () => {
   const ref = useRef();
-  let thresholdOptions = [];
-
-  for (let step = 0; step <= 1; step = step + 0.005) {
-    thresholdOptions.push(step);
-  }
+  const thresholdOptions = getScrollThresholds(0.005);
 
   const onScreen = useOnScreen(ref, thresholdOptions);
   const { getThreshold } = onScreen;
@@ -190,7 +183,7 @@ const FrenchPress = () => {
 
   return (
     <>
-      <ScrollContainer ref={ref} background={'#000000'}>
+      <StyledScrollContainer ref={ref} background={'#000000'}>
         <Main>
           <TitleContainer>
             <Title style={{ translateY: driftUp, opacity }}>
@@ -248,7 +241,7 @@ const FrenchPress = () => {
             </StoryItem>
           </Story>
         </Main>
-      </ScrollContainer>
+      </StyledScrollContainer>
       <BottomWave
         xmlns="http://www.w3.org/2000/svg"
         width="1440"

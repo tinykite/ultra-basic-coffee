@@ -1,12 +1,9 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { useOnScreen } from '../hooks/useOnScreen';
+import { StyledScrollContainer } from './GlobalStyledComponents';
+import { getScrollThresholds } from '../helpers/animation';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-
-const ScrollContainer = styled.div`
-  background: ${props => props.background};
-  margin: 0 auto;
-`;
 
 const Main = styled.article`
   width: 90%;
@@ -188,13 +185,7 @@ const KalitaWave = () => {
 
   const illustrationOnScreen = useOnScreen(ref, 1);
   const { isIntersecting } = illustrationOnScreen;
-
-  let thresholdOptions = [];
-
-  for (let step = 0; step <= 1; step = step + 0.005) {
-    thresholdOptions.push(step);
-  }
-
+  const thresholdOptions = getScrollThresholds(0.005);
   const onScreen = useOnScreen(ref, thresholdOptions);
 
   const { getThreshold } = onScreen;
@@ -223,7 +214,7 @@ const KalitaWave = () => {
           d="M1440 0v57.015h-316.267c-187.95 0-187.95 58.016-375.903 58.016-187.96 0-187.96-58.015-375.92-58.015C199.959 57.016 151 249.493 0 282.279V0h1440z"
         ></path>
       </TopWave>
-      <ScrollContainer ref={ref} background={'#fcf1f2'}>
+      <StyledScrollContainer ref={ref} background={'#fcf1f2'}>
         <Main>
           <Title style={{ skew, opacity }}>Kalita Wave</Title>
           <Intro>
@@ -311,7 +302,7 @@ const KalitaWave = () => {
             more evenly extract your coffee.
           </Story>
         </Main>
-      </ScrollContainer>
+      </StyledScrollContainer>
       <BottomWave
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 245"

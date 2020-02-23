@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import { useOnScreen } from './hooks/useOnScreen';
+import { StyledScrollContainer } from './GlobalStyledComponents';
+import { useOnScreen } from '../hooks/useOnScreen';
+import { getScrollThresholds } from '../helpers/animation';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { Scroll } from 'framer';
 
 const WaveTop = styled(motion.svg)`
   width: 100%;
@@ -17,12 +18,6 @@ const BottomWave = styled(motion.svg)`
   width: 100%;
   height: auto;
   margin-top: 24px;
-`;
-
-const ScrollContainer = styled(motion.div)`
-  background: #000000;
-  margin: 0 auto;
-  position: relative;
 `;
 
 const Main = styled(motion.div)`
@@ -133,11 +128,7 @@ const Strength = () => {
   const { isIntersecting } = illustrationOnScreen;
 
   const opacityRef = useRef();
-  let thresholdOptions = [];
-
-  for (let step = 0; step <= 1; step = step + 0.005) {
-    thresholdOptions.push(step);
-  }
+  const thresholdOptions = getScrollThresholds(0.005);
 
   const onScreen = useOnScreen(opacityRef, thresholdOptions);
   const { getThreshold } = onScreen;
@@ -154,7 +145,7 @@ const Strength = () => {
   });
 
   return (
-    <ScrollContainer>
+    <StyledScrollContainer background={'#000000'}>
       <WaveTop
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 115"
@@ -370,7 +361,7 @@ const Strength = () => {
           d="M1440 0v114.084C1289.964 106.687 1277.001 57 1102.99 57c-188.006 0-188.006 58-376.012 58-187.998 0-187.998-58-375.994-58C171.722 57 163.385 109.738 0 114.636V0h1440z"
         ></path>
       </BottomWave>
-    </ScrollContainer>
+    </StyledScrollContainer>
   );
 };
 

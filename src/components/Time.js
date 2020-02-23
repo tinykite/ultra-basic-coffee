@@ -1,28 +1,15 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import { useOnScreen } from './hooks/useOnScreen';
+import { useOnScreen } from '../hooks/useOnScreen';
+import { StyledScrollContainer } from './GlobalStyledComponents';
+import { getScrollThresholds } from '../helpers/animation';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { Scroll } from 'framer';
-
-const WaveTop = styled(motion.svg)`
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: -1px;
-  background: #f6efdf 1440px 50px no-repeat;
-`;
 
 const BottomWave = styled(motion.svg)`
   background: #ffffff;
   width: 100%;
   height: auto;
   margin-top: 24px;
-`;
-
-const ScrollContainer = styled(motion.div)`
-  background: #394419;
-  margin: 0 auto;
-  position: relative;
 `;
 
 const Main = styled(motion.div)`
@@ -126,11 +113,7 @@ const StoryItem = styled(motion.p)`
 const Time = () => {
   const ref = useRef();
   const illustrationRef = useRef();
-  let thresholdOptions = [];
-
-  for (let step = 0; step <= 1; step = step + 0.005) {
-    thresholdOptions.push(step);
-  }
+  const thresholdOptions = getScrollThresholds(0.005);
 
   const onScreen = useOnScreen(ref, thresholdOptions);
   const illustrationOnScreen = useOnScreen(illustrationRef, 1);
@@ -151,17 +134,7 @@ const Time = () => {
   });
 
   return (
-    <ScrollContainer>
-      {/* <WaveTop
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 115"
-      >
-        <path
-          fill="#394419"
-          fillRule="evenodd"
-          d="M0 0c187.992 0 165.992 58 353.984 58C541.98 58 541.98 0 729.978 0c188.006 0 188.006 58 376.011 58C1293.995 58 1251.995 0 1440 0v115H0V0z"
-        ></path>
-      </WaveTop> */}
+    <StyledScrollContainer background={'#394419'}>
       <Main ref={ref} style={{ opacity }}>
         <Illustration>
           <IllustrationItem
@@ -392,7 +365,7 @@ const Time = () => {
           d="M1440 0v114.084C1289.964 106.687 1277.001 57 1102.99 57c-188.006 0-188.006 58-376.012 58-187.998 0-187.998-58-375.994-58C171.722 57 163.385 109.738 0 114.636V0h1440z"
         ></path>
       </BottomWave>
-    </ScrollContainer>
+    </StyledScrollContainer>
   );
 };
 

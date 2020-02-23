@@ -1,17 +1,9 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
+import { getScrollThresholds } from '../helpers/animation';
+import { StyledScrollContainer } from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-
-const ScrollContainer = styled.div`
-  background: ${props => props.background};
-  margin: 0 auto;
-  position: relative;
-
-  @media (max-width: 720px) {
-    padding-bottom: 4vh;
-  }
-`;
 
 const WaveTop = styled(motion.svg)`
   width: 100%;
@@ -159,13 +151,9 @@ const Letter = styled(motion.span)`
   line-height: 1em;
 `;
 
-const Aeropress = ({ title, background }) => {
+const Aeropress = ({ title = 'Aeropress' }) => {
   const ref = useRef();
-  let thresholdOptions = [];
-
-  for (let step = 0; step <= 1; step = step + 0.005) {
-    thresholdOptions.push(step);
-  }
+  const thresholdOptions = getScrollThresholds(0.005);
 
   const onScreen = useOnScreen(ref, thresholdOptions);
   const { getThreshold } = onScreen;
@@ -217,7 +205,7 @@ const Aeropress = ({ title, background }) => {
           d="M0 0c187.992 0 165.992 58 353.984 58C541.98 58 541.98 0 729.978 0c188.006 0 188.006 58 376.011 58C1293.995 58 1251.995 0 1440 0v115H0V0z"
         ></path>
       </WaveTop>
-      <ScrollContainer ref={ref} background={background}>
+      <StyledScrollContainer ref={ref} background={'#19224f'}>
         <Main>
           <Title fontStack="Barbour" style={{ opacity }}>
             <InnerTitleWrapper
@@ -347,7 +335,7 @@ const Aeropress = ({ title, background }) => {
             your dreams.
           </Story>
         </Main>
-      </ScrollContainer>
+      </StyledScrollContainer>
     </>
   );
 };

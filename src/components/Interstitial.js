@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
+import { getScrollThresholds } from '../helpers/animation';
 import { useOnScreen } from '../hooks/useOnScreen';
 import styled from 'styled-components';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import Wave from './Wave';
 
 const Main = styled.div`
   display: flex;
@@ -36,11 +36,7 @@ const Title = styled(motion.h2)`
 
 const Interstitial = ({ title, icon }) => {
   const ref = useRef();
-  let thresholdOptions = [];
-
-  for (let step = 0; step <= 1; step = step + 0.005) {
-    thresholdOptions.push(step);
-  }
+  const thresholdOptions = getScrollThresholds(0.005);
 
   const onScreen = useOnScreen(ref, thresholdOptions);
   const { getThreshold } = onScreen;
