@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { StyledScrollContainer } from './GlobalStyledComponents';
-import { getScrollThresholds } from '../helpers/animation';
+import { multiThresholdArray } from '../helpers/animation';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 const Main = styled.article`
@@ -185,8 +185,7 @@ const KalitaWave = () => {
 
   const illustrationOnScreen = useOnScreen(ref, 1);
   const { isIntersecting } = illustrationOnScreen;
-  const thresholdOptions = getScrollThresholds(0.005);
-  const onScreen = useOnScreen(ref, thresholdOptions);
+  const onScreen = useOnScreen(ref, multiThresholdArray);
 
   const { getThreshold } = onScreen;
 

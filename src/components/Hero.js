@@ -75,6 +75,7 @@ const Intro = styled.section`
   align-items: center;
   justify-content: center;
   padding: 4vh 0;
+  background: #ffffff;
 
   @media (min-width: 500px) {
     padding: 6vh 0;

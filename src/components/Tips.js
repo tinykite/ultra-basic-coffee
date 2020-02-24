@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { useOnScreen } from '../hooks/useOnScreen';
-import { getScrollThresholds } from '../helpers/animation';
+import { multiThresholdArray } from '../helpers/animation';
 import { StyledScrollContainer } from './GlobalStyledComponents';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
@@ -93,10 +93,8 @@ const TipBody = styled(motion.p)`
 const Tips = () => {
   const ref = useRef();
   const illustrationRef = useRef();
-  const thresholdOptions = getScrollThresholds(0.005);
 
-  const onScreen = useOnScreen(ref, thresholdOptions);
-  const illustrationOnScreen = useOnScreen(illustrationRef, 1);
+  const onScreen = useOnScreen(ref, multiThresholdArray);
 
   const { getThreshold } = onScreen;
 

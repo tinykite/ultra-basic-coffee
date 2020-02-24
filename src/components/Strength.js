@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { StyledScrollContainer } from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
-import { getScrollThresholds } from '../helpers/animation';
+import { multiThresholdArray } from '../helpers/animation';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 const WaveTop = styled(motion.svg)`
@@ -128,9 +128,8 @@ const Strength = () => {
   const { isIntersecting } = illustrationOnScreen;
 
   const opacityRef = useRef();
-  const thresholdOptions = getScrollThresholds(0.005);
 
-  const onScreen = useOnScreen(opacityRef, thresholdOptions);
+  const onScreen = useOnScreen(ref, multiThresholdArray);
   const { getThreshold } = onScreen;
 
   const position = useMotionValue(0);

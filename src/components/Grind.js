@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import { getScrollThresholds } from '../helpers/animation';
+import { multiThresholdArray } from '../helpers/animation';
 import { StyledScrollContainer } from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
@@ -107,9 +107,7 @@ const StoryItem = styled(motion.p)`
 const Grind = () => {
   const ref = useRef();
   const illustrationRef = useRef();
-  const thresholdOptions = getScrollThresholds(0.005);
-
-  const onScreen = useOnScreen(ref, thresholdOptions);
+  const onScreen = useOnScreen(ref, multiThresholdArray);
   const illustrationOnScreen = useOnScreen(illustrationRef, 1);
 
   const { isIntersecting } = illustrationOnScreen;

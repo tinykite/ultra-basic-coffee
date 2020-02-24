@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import { getScrollThresholds } from '../helpers/animation';
+import { multiThresholdArray } from '../helpers/animation';
 import { StyledScrollContainer } from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
@@ -164,9 +164,7 @@ const BottomWave = styled(motion.svg)`
 
 const FrenchPress = () => {
   const ref = useRef();
-  const thresholdOptions = getScrollThresholds(0.005);
-
-  const onScreen = useOnScreen(ref, thresholdOptions);
+  const onScreen = useOnScreen(ref, multiThresholdArray);
   const { getThreshold } = onScreen;
 
   const position = useMotionValue(0);

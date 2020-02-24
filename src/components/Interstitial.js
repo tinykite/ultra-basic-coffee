@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { getScrollThresholds } from '../helpers/animation';
+import { multiThresholdArray } from '../helpers/animation';
 import { useOnScreen } from '../hooks/useOnScreen';
 import styled from 'styled-components';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
@@ -36,9 +36,7 @@ const Title = styled(motion.h2)`
 
 const Interstitial = ({ title, icon }) => {
   const ref = useRef();
-  const thresholdOptions = getScrollThresholds(0.005);
-
-  const onScreen = useOnScreen(ref, thresholdOptions);
+  const onScreen = useOnScreen(ref, multiThresholdArray);
   const { getThreshold } = onScreen;
 
   const position = useMotionValue(0);
@@ -62,7 +60,7 @@ const Interstitial = ({ title, icon }) => {
             viewBox="0 0 68 88"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            style={{ opacity: position, translateY: driftUp }}
+            // style={{ opacity: position, translateY: driftUp }}
           >
             <path
               fill-rule="evenodd"
@@ -80,7 +78,7 @@ const Interstitial = ({ title, icon }) => {
             viewBox="0 0 68 88"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            style={{ opacity: position, translateY: driftUp }}
+            // style={{ opacity: position, translateY: driftUp }}
           >
             <path
               fill-rule="evenodd"
@@ -98,7 +96,7 @@ const Interstitial = ({ title, icon }) => {
             viewBox="0 0 68 88"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            style={{ opacity: position, translateY: driftUp }}
+            // style={{ opacity: position, translateY: driftUp }}
           >
             <path
               fill-rule="evenodd"
@@ -117,29 +115,7 @@ const Interstitial = ({ title, icon }) => {
     <>
       <Main ref={ref}>
         <InterstitialIcon icon={icon} />
-        {/* <Icon
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 68 88"
-          height="88"
-          width="68"
-          style={{ opacity: position, translateY: driftUp }}
-        >
-          <motion.g
-            fill="none"
-            fillRule="evenodd"
-            stroke="#000"
-            strokeWidth="8"
-          >
-            <motion.path d="M4 4h60v80H4z" pathOffset="0 1" />
-            <motion.path d="M45 0v88" />
-            <motion.path d="M23 22v66" />
-            <motion.path d="M27 58H0" />
-            <motion.path d="M49 26H19" />
-          </motion.g>
-        </Icon> */}
-        <Title style={{ opacity: position, translateY: driftUp }}>
-          {title}
-        </Title>
+        <Title>{title}</Title>
       </Main>
     </>
   );
