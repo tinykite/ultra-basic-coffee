@@ -12,6 +12,7 @@ const Main = styled.article`
   justify-content: center;
   text-align: center;
   position: relative;
+  overflow: hidden;
 
   @media (min-width: 500px) {
     width: 80%;
