@@ -6,4 +6,4 @@ const getScrollThresholds = maxIterations => {
   return thresholdList;
 };
 
-export const multiThresholdArray = getScrollThresholds(0.005);
+export const multiThresholdArray = getScrollThresholds(0.001);
