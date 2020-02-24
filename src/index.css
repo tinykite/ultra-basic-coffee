@@ -1,45 +1,3 @@
-/* .inputmonoregular {
-	font-family: "Input Mono Reg";
-	font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-}
-
-.inputmonobolditalic {
-	font-family: "Input Mono Bd It";
-	font-display: swap;
-	font-style: italic;
-	font-weight: normal;
-}
-
-.inputmonoitalic {
-	font-family: "Input Mono It";
-	font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-}
-
-.inputmonolightitalic {
-	font-family: "Input Mono Lt It";
-	font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-}
-
-.inputmonobold {
-	font-family: "Input Mono Bd";
-	font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-}
-
-.inputmonolight {
-	font-family: "Input Mono Lt";
-	font-display: swap;
-	font-style: normal;
-	font-weight: normal;
-} */
-
 @font-face {
   font-family: 'Barbour';
   src: url('./fonts/barbour-webfont.woff2') format('woff2'),
@@ -64,6 +22,10 @@
     url('./fonts/Nostrav1.0-Sett.woff') format('woff'),
     url('./fonts/Nostrav1.0-Sett.eot') format('eot');
   font-style: normal;
+}
+
+body {
+  background: #000000;
 }
 
 body,
