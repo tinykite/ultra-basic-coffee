@@ -172,14 +172,6 @@ const Coffee = styled(motion.div)`
   background: #1b234f;
 `;
 
-const TopWave = styled(motion.svg)`
-  background: #fcf1f2;
-`;
-
-const BottomWave = styled(motion.svg)`
-  background: #000000;
-`;
-
 const KalitaWave = () => {
   const ref = useRef();
 
@@ -203,16 +195,6 @@ const KalitaWave = () => {
 
   return (
     <>
-      <TopWave
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 283"
-      >
-        <path
-          fill="#19224F"
-          fillRule="evenodd"
-          d="M1440 0v57.015h-316.267c-187.95 0-187.95 58.016-375.903 58.016-187.96 0-187.96-58.015-375.92-58.015C199.959 57.016 151 249.493 0 282.279V0h1440z"
-        ></path>
-      </TopWave>
       <StyledScrollContainer ref={ref} background={'#fcf1f2'}>
         <Main>
           <Title style={{ skew, opacity }}>Kalita Wave</Title>
@@ -302,16 +284,6 @@ const KalitaWave = () => {
           </Story>
         </Main>
       </StyledScrollContainer>
-      <BottomWave
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 245"
-      >
-        <path
-          fill="#FCF1F2"
-          fillRule="evenodd"
-          d="M1440 0v244.365C1311.896 220.007 1287.48 125 1123.626 125c-187.95 0-177.173 65.47-365.126 65.47-187.96 0-194.62-113.986-382.58-113.986-187.96 0-187.96 77.827-375.92 77.827V0h1440z"
-        ></path>
-      </BottomWave>
     </>
   );
 };

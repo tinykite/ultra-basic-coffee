@@ -5,21 +5,6 @@ import { useOnScreen } from '../hooks/useOnScreen';
 import { multiThresholdArray } from '../helpers/animation';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
-const WaveTop = styled(motion.svg)`
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  background: white;
-`;
-
-const BottomWave = styled(motion.svg)`
-  background: #f6efdf;
-  width: 100%;
-  height: auto;
-  margin-top: 24px;
-`;
-
 const Main = styled(motion.div)`
   display: grid;
   margin: 0 auto;

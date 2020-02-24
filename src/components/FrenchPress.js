@@ -156,12 +156,6 @@ const IllustrationItem = styled(motion.svg)`
   overflow: visible;
 `;
 
-const BottomWave = styled(motion.svg)`
-  background: #ffffff;
-  width: 100%;
-  height: auto;
-`;
-
 const FrenchPress = () => {
   const ref = useRef();
   const onScreen = useOnScreen(ref, multiThresholdArray);
@@ -240,20 +234,6 @@ const FrenchPress = () => {
           </Story>
         </Main>
       </StyledScrollContainer>
-      <BottomWave
-        xmlns="http://www.w3.org/2000/svg"
-        width="1440"
-        height="115"
-        viewBox="0 0 1440 115"
-      >
-        <path
-          fill="#000"
-          fillRule="evenodd"
-          stroke="none"
-          strokeWidth="1"
-          d="M1440 0v114.084C1289.964 106.687 1277.001 57 1102.99 57c-188.006 0-188.006 58-376.012 58-187.998 0-187.998-58-375.994-58C171.722 57 163.385 109.738 0 114.636V0h1440z"
-        ></path>
-      </BottomWave>
     </>
   );
 };
