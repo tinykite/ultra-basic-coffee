@@ -4,8 +4,7 @@ import { useOnScreen } from '../hooks/useOnScreen';
 import {
   ScrollContainer,
   TechniqueMain,
-  TechniqueStory,
-  TechniqueStoryItem,
+  TechniqueTextItem,
   TechniqueTitle,
   TechniqueIllustrationContainer,
 } from './GlobalStyledComponents';
@@ -36,7 +35,11 @@ const Time = () => {
 
   return (
     <ScrollContainer background={'#394419'}>
-      <TechniqueMain ref={ref} style={{ opacity, color: 'white' }}>
+      <TechniqueMain
+        ref={ref}
+        style={{ opacity, color: 'white' }}
+        className="l-gridContainer-leftIllustration"
+      >
         <TechniqueIllustrationContainer>
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
@@ -222,35 +225,37 @@ const Time = () => {
             </motion.g>
           </motion.svg>
         </TechniqueIllustrationContainer>
-        <TechniqueTitle>3. Time</TechniqueTitle>
-        <TechniqueStory>
-          <TechniqueStoryItem ref={illustrationRef}>
+        <TechniqueTitle className="l-gridItem-2of2">
+          3. Time
+        </TechniqueTitle>
+        <article className="l-gridItem-2of2">
+          <TechniqueTextItem ref={illustrationRef}>
             Time is a key variable in coercing quality coffee flavor.
             And maybe not even as much as you think — a perfectly
             sweet cup of coffee might only contain 18-22% of the
             initial mass of the coffee grounds.
-          </TechniqueStoryItem>
-          <TechniqueStoryItem>
+          </TechniqueTextItem>
+          <TechniqueTextItem>
             <em>
               {' '}
               Nerd alert: this is typically referred to as TDS, or
               Total Dissolved Solids.
             </em>
-          </TechniqueStoryItem>
-          <TechniqueStoryItem>
+          </TechniqueTextItem>
+          <TechniqueTextItem>
             With a percolator, time is a pretty static constant. Brew
             too long and your coffee will be gross, yadda yadda! But
             if you're feeling adventurous, how you brew coffee — and
             at what time — can also become a key creative aspect of
             your coffee game.
-          </TechniqueStoryItem>
-          <TechniqueStoryItem>
+          </TechniqueTextItem>
+          <TechniqueTextItem>
             For inspiration, I love checking out the recipes on the
             World Aeropress Championship website — which catalogues
             the recipes of each of its top three contenders every
             year.
-          </TechniqueStoryItem>
-        </TechniqueStory>
+          </TechniqueTextItem>
+        </article>
       </TechniqueMain>
     </ScrollContainer>
   );

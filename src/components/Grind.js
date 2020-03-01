@@ -4,8 +4,7 @@ import {
   ScrollContainer,
   TechniqueMain,
   TechniqueIllustrationContainer,
-  TechniqueStory,
-  TechniqueStoryItem,
+  TechniqueTextItem,
   TechniqueTitle,
 } from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
@@ -34,8 +33,11 @@ const Grind = () => {
 
   return (
     <ScrollContainer background={'#F6EFDF'}>
-      <TechniqueMain style={{ color: '#394419' }}>
-        <TechniqueIllustrationContainer>
+      <TechniqueMain
+        style={{ color: '#394419' }}
+        className="l-gridContainer-rightIllustration"
+      >
+        <TechniqueIllustrationContainer className="l-gridItem-2of2">
           <motion.svg
             initial={{ opacity: 0 }}
             animate={isIntersecting && { opacity: 1 }}
@@ -217,40 +219,42 @@ const Grind = () => {
             </g>
           </motion.svg>
         </TechniqueIllustrationContainer>
-        <TechniqueTitle>2. Grind</TechniqueTitle>
-        <TechniqueStory>
-          <TechniqueStoryItem>
+        <TechniqueTitle className="l-gridItem-1of2">
+          2. Grind
+        </TechniqueTitle>
+        <article className="l-gridItem-1of2">
+          <TechniqueTextItem>
             Many guides share the same seemingly immutable tips about
             how to grind coffee:
-          </TechniqueStoryItem>
-          <TechniqueStoryItem ref={illustrationRef}>
+          </TechniqueTextItem>
+          <TechniqueTextItem ref={illustrationRef}>
             Using a <em>whirly boi</em> (or blade grinder) on your
             beans is garbage. The Baratza Encore is lovely. You'll
             make more flavorful coffee if you avoid pre-ground beans —
             as well as coffee labeled without an obvious roast date.
-          </TechniqueStoryItem>
-          <TechniqueStoryItem>
+          </TechniqueTextItem>
+          <TechniqueTextItem>
             It's all great. It also feels like your nutritionist
             telling you that sugar is inflammatory.
-          </TechniqueStoryItem>
-          <TechniqueStoryItem>
+          </TechniqueTextItem>
+          <TechniqueTextItem>
             How do you improve upon bad coffee? According to Counter
             Culture, by making frequent and tiny adjustments to your
             grind based off of taste.
-          </TechniqueStoryItem>
-          <TechniqueStoryItem>
+          </TechniqueTextItem>
+          <TechniqueTextItem>
             <strong>
               If your mouth feels dry with an ashy aftertaste,
             </strong>{' '}
             you’re likely grinding too fine.
-          </TechniqueStoryItem>
-          <TechniqueStoryItem>
+          </TechniqueTextItem>
+          <TechniqueTextItem>
             <strong>
               If the coffee tastes weak, sour, or a little papery,
             </strong>{' '}
             you may be grinding too coarse.
-          </TechniqueStoryItem>
-        </TechniqueStory>
+          </TechniqueTextItem>
+        </article>
       </TechniqueMain>
     </ScrollContainer>
   );

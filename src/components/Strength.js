@@ -5,8 +5,7 @@ import {
   TechniqueMain,
   TechniqueIllustrationContainer,
   TechniqueTitle,
-  TechniqueStory,
-  TechniqueStoryItem,
+  TechniqueTextItem,
 } from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { multiThresholdArray } from '../helpers/animation';
@@ -38,8 +37,9 @@ const Strength = () => {
       <TechniqueMain
         ref={opacityRef}
         style={{ opacity: position, color: 'white' }}
+        className="l-gridContainer-leftIllustration"
       >
-        <TechniqueIllustrationContainer>
+        <TechniqueIllustrationContainer className="l-gridItem-1of2">
           <motion.svg width="128" height="204" viewbox="0 0 128 204">
             <defs>
               <mask id="maskTriangleLeft">
@@ -196,32 +196,34 @@ const Strength = () => {
             </motion.g>
           </motion.svg>
         </TechniqueIllustrationContainer>
-        <TechniqueTitle>1. Strength</TechniqueTitle>
-        <TechniqueStory>
-          <TechniqueStoryItem ref={ref}>
+        <TechniqueTitle className="l-gridItem-2of2">
+          1. Strength
+        </TechniqueTitle>
+        <article className="l-gridItem-2of2">
+          <TechniqueTextItem ref={ref}>
             In high school I thought that strong coffee was the kind
             of thing that punched you in the face and made you speak
             like a Hemingway novel.
-          </TechniqueStoryItem>
-          <TechniqueStoryItem>
+          </TechniqueTextItem>
+          <TechniqueTextItem>
             And to credit my heart-on-sleeve teenage self, it does
             heavily influence our perception of flavor. But the term
             doesn't accurately qualify how aggressively macho (or even
             how long) something was brewed.{' '}
-          </TechniqueStoryItem>
-          <TechniqueStoryItem>
+          </TechniqueTextItem>
+          <TechniqueTextItem>
             Strength is predominantly determined, before brewing, by
             the ratio of coffee to hot water that you use: and for
             adequately "strong" coffee, coffee educators typically
             recommend staying between 1:15 and 1:17.
-          </TechniqueStoryItem>
-          <TechniqueStoryItem>
+          </TechniqueTextItem>
+          <TechniqueTextItem>
             <em>
               For 8oz of coffee (using a 1:15 ratio), that means a
               dose of approximately ~15 grams of beans.
             </em>
-          </TechniqueStoryItem>
-        </TechniqueStory>
+          </TechniqueTextItem>
+        </article>
       </TechniqueMain>
     </ScrollContainer>
   );

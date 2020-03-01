@@ -17,7 +17,6 @@ export const TechniqueMain = styled(motion.div)`
 
   @media (min-width: 720px) {
     padding-top: 24px;
-    grid-template-columns: 120px 1fr;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -31,19 +30,17 @@ export const TechniqueMain = styled(motion.div)`
 
   @media (min-width: 1000px) {
     width: 100%;
-    grid-template-columns: 135px 550px;
     grid-column-gap: 60px;
   }
 `;
 
 export const TechniqueIllustrationContainer = styled(motion.div)`
-  grid-column: 1 / -1;
   margin: 0 auto;
 
   @media (min-width: 720px) {
     height: 0;
     align-self: start;
-    grid-column: 1 / 2;
+
     width: 100%;
     grid-row: 1;
   }
@@ -54,12 +51,10 @@ export const TechniqueTitle = styled(motion.h2)`
   font-weight: 400;
   font-weight: normal;
   font-size: 24px;
-  grid-column: 1 / -1;
   grid-row: 1;
 
   @media (min-width: 720px) {
     text-align: left;
-    grid-column: 2 / -1;
   }
 
   @media (min-width: 900px) {
@@ -67,16 +62,7 @@ export const TechniqueTitle = styled(motion.h2)`
   }
 `;
 
-export const TechniqueStory = styled(motion.article)`
-  grid-column: 1 / -1;
-
-  @media (min-width: 720px) {
-    grid-column: 2 / -1;
-    margin-top: 20px;
-  }
-`;
-
-export const TechniqueStoryItem = styled(motion.p)`
+export const TechniqueTextItem = styled(motion.p)`
   line-height: 1.6;
   font-size: 14px;
   font-family: input-mono, monospace;
