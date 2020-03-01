@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { multiThresholdArray } from '../helpers/animation';
-import { StyledScrollContainer } from './GlobalStyledComponents';
+import { ScrollContainer } from './GlobalStyledComponents';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 const Main = styled(motion.article)`
@@ -111,7 +111,7 @@ const Tips = () => {
   });
 
   return (
-    <StyledScrollContainer background={'#2b3257'}>
+    <ScrollContainer background={'#F6EFDF'}>
       <Main ref={ref} style={{ opacity }}>
         <Tip>
           {' '}
@@ -142,7 +142,7 @@ const Tips = () => {
           </a>
         </Tip>
       </Main>
-    </StyledScrollContainer>
+    </ScrollContainer>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { useOnScreen } from '../hooks/useOnScreen';
-import { StyledScrollContainer } from './GlobalStyledComponents';
+import { ScrollContainer } from './GlobalStyledComponents';
 import { multiThresholdArray } from '../helpers/animation';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
@@ -196,7 +196,7 @@ const KalitaWave = () => {
 
   return (
     <>
-      <StyledScrollContainer ref={ref} background={'#fcf1f2'}>
+      <ScrollContainer ref={ref} background={'#fcf1f2'}>
         <Main>
           <Title style={{ skew, opacity }}>Kalita Wave</Title>
           <Intro>
@@ -284,7 +284,7 @@ const KalitaWave = () => {
             more evenly extract your coffee.
           </Story>
         </Main>
-      </StyledScrollContainer>
+      </ScrollContainer>
     </>
   );
 };

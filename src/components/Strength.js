@@ -1,111 +1,16 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import { StyledScrollContainer } from './GlobalStyledComponents';
+import {
+  ScrollContainer,
+  TechniqueMain,
+  TechniqueIllustrationContainer,
+  TechniqueTitle,
+  TechniqueStory,
+  TechniqueStoryItem,
+} from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { multiThresholdArray } from '../helpers/animation';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-
-const Main = styled(motion.div)`
-  display: grid;
-  margin: 0 auto;
-  width: 80%;
-  padding-top: 5px;
-  text-align: center;
-  grid-row-gap: 24px;
-
-  @media (min-width: 500px) {
-    padding-top: 100px;
-  }
-
-  @media (min-width: 720px) {
-    padding-top: 150px;
-    grid-template-columns: 100px 1fr;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    grid-column-gap: 45px;
-    max-width: 800px;
-    text-align: left;
-    grid-row-gap: 0;
-    width: 80%;
-  }
-
-  @media (min-width: 1000px) {
-    width: 100%;
-    grid-template-columns: 135px 550px;
-    grid-column-gap: 60px;
-  }
-`;
-
-const Illustration = styled(motion.div)`
-  grid-column: 1 / -1;
-  margin: 0 auto;
-
-  @media (min-width: 720px) {
-    height: 0;
-    align-self: start;
-    grid-column: 1 / 1;
-    width: 100%;
-  }
-`;
-
-const IllustrationItem = styled(motion.svg)``;
-
-const Title = styled(motion.h2)`
-  font-family: antique-olive-nord, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #fff;
-  font-weight: normal;
-  font-size: 24px;
-  grid-column: 1 / -1;
-  order: -1;
-
-  @media (min-width: 720px) {
-    text-align: left;
-    grid-column: 2 / -1;
-    order: 0;
-  }
-
-  @media (min-width: 900px) {
-    font-size: 36px;
-  }
-`;
-
-const Story = styled(motion.article)`
-  grid-column: 1 / -1;
-
-  @media (min-width: 720px) {
-    grid-column: 2 / -1;
-    margin-top: 20px;
-  }
-`;
-
-const StoryItem = styled(motion.p)`
-  line-height: 1.6;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: 200;
-
-  a:link,
-  a:active,
-  a:hover,
-  a:visited {
-    color: inherit;
-    text-decoration: none;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #ffffff;
-  }
-
-  & + & {
-    margin-top: 20px;
-  }
-
-  @media (min-width: 720px) {
-    text-align: left;
-    font-size: 16px;
-  }
-`;
 
 const Strength = () => {
   const ref = useRef();
@@ -129,15 +34,13 @@ const Strength = () => {
   });
 
   return (
-    <StyledScrollContainer background={'#000000'}>
-      <Main ref={opacityRef} style={{ opacity: position }}>
-        <Illustration>
-          <IllustrationItem
-            style={{ translateY: driftUp }}
-            width="128"
-            height="204"
-            viewbox="0 0 128 204"
-          >
+    <ScrollContainer background={'#000000'}>
+      <TechniqueMain
+        ref={opacityRef}
+        style={{ opacity: position, color: 'white' }}
+      >
+        <TechniqueIllustrationContainer>
+          <motion.svg width="128" height="204" viewbox="0 0 128 204">
             <defs>
               <mask id="maskTriangleLeft">
                 <rect
@@ -170,7 +73,6 @@ const Strength = () => {
                 transition={{
                   duration: 0.5,
                   delay: 1,
-                  ease: 'easeOut',
                 }}
                 data-index="1"
                 points="65.074 29 39 0 91.148 0"
@@ -292,36 +194,36 @@ const Strength = () => {
                 points="65.5 187 50 204 81 204"
               />
             </motion.g>
-          </IllustrationItem>
-        </Illustration>
-        <Title>1. Strength</Title>
-        <Story>
-          <StoryItem ref={ref}>
+          </motion.svg>
+        </TechniqueIllustrationContainer>
+        <TechniqueTitle>1. Strength</TechniqueTitle>
+        <TechniqueStory>
+          <TechniqueStoryItem ref={ref}>
             In high school I thought that strong coffee was the kind
             of thing that punched you in the face and made you speak
             like a Hemingway novel.
-          </StoryItem>
-          <StoryItem>
+          </TechniqueStoryItem>
+          <TechniqueStoryItem>
             And to credit my heart-on-sleeve teenage self, it does
             heavily influence our perception of flavor. But the term
             doesn't accurately qualify how aggressively macho (or even
             how long) something was brewed.{' '}
-          </StoryItem>
-          <StoryItem>
+          </TechniqueStoryItem>
+          <TechniqueStoryItem>
             Strength is predominantly determined, before brewing, by
             the ratio of coffee to hot water that you use: and for
             adequately "strong" coffee, coffee educators typically
             recommend staying between 1:15 and 1:17.
-          </StoryItem>
-          <StoryItem>
+          </TechniqueStoryItem>
+          <TechniqueStoryItem>
             <em>
               For 8oz of coffee (using a 1:15 ratio), that means a
               dose of approximately ~15 grams of beans.
             </em>
-          </StoryItem>
-        </Story>
-      </Main>
-    </StyledScrollContainer>
+          </TechniqueStoryItem>
+        </TechniqueStory>
+      </TechniqueMain>
+    </ScrollContainer>
   );
 };
 

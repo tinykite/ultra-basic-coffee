@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { multiThresholdArray } from '../helpers/animation';
-import { StyledScrollContainer } from './GlobalStyledComponents';
+import { ScrollContainer } from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
@@ -185,7 +185,7 @@ const Aeropress = ({ title = 'Aeropress' }) => {
 
   return (
     <>
-      <StyledScrollContainer ref={ref} background={'#19224f'}>
+      <ScrollContainer ref={ref} background={'#19224f'}>
         <Main>
           <Title fontStack="Barbour" style={{ opacity }}>
             <InnerTitleWrapper
@@ -207,7 +207,6 @@ const Aeropress = ({ title = 'Aeropress' }) => {
               height="575"
               fill="none"
               viewBox="0 0 250 575"
-              style={{ opacity }}
             >
               <path
                 fill="#fff"
@@ -315,7 +314,7 @@ const Aeropress = ({ title = 'Aeropress' }) => {
             your dreams.
           </Story>
         </Main>
-      </StyledScrollContainer>
+      </ScrollContainer>
     </>
   );
 };

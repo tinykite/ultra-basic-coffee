@@ -1,14 +1,12 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer';
 import { useOnScreen } from '../hooks/useOnScreen';
-import { StyledScrollContainer } from './GlobalStyledComponents';
+import { ScrollContainer } from './GlobalStyledComponents';
 import styled from 'styled-components';
 
 // We want the scroll container for the Introduction component to inherit
 // all previous global styles, and add new ones specific to this instance
-const StyledIntroductionScrollContainer = styled(
-  StyledScrollContainer,
-)`
+const IntroductionScrollContainer = styled(ScrollContainer)`
   overflow: hidden;
 
   @media (min-width: 500px) {
@@ -102,10 +100,7 @@ const Introduction = () => {
 
   return (
     <>
-      <StyledIntroductionScrollContainer
-        ref={ref}
-        background={'#000000'}
-      >
+      <IntroductionScrollContainer ref={ref} background={'#000000'}>
         <Story>
           <IllustrationItem
             width="104"
@@ -154,7 +149,7 @@ const Introduction = () => {
             <path d="M37 0h19v124.5a9.5 9.5 0 0 1-19 0V0z" />
           </g>
         </Drips>
-      </StyledIntroductionScrollContainer>
+      </IntroductionScrollContainer>
     </>
   );
 };

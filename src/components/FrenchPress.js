@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { multiThresholdArray } from '../helpers/animation';
-import { StyledScrollContainer } from './GlobalStyledComponents';
+import { ScrollContainer } from './GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
@@ -175,7 +175,7 @@ const FrenchPress = () => {
 
   return (
     <>
-      <StyledScrollContainer ref={ref} background={'#000000'}>
+      <ScrollContainer ref={ref} background={'#000000'}>
         <Main>
           <TitleContainer>
             <Title style={{ translateY: driftUp, opacity }}>
@@ -233,7 +233,7 @@ const FrenchPress = () => {
             </StoryItem>
           </Story>
         </Main>
-      </StyledScrollContainer>
+      </ScrollContainer>
     </>
   );
 };

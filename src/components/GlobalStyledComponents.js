@@ -1,7 +1,103 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const StyledScrollContainer = styled.div`
+export const ScrollContainer = styled.div`
   background: ${props => props.background};
   margin: 0 auto;
   position: relative;
+`;
+
+export const TechniqueMain = styled(motion.div)`
+  display: grid;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 50px;
+  text-align: center;
+  grid-row-gap: 24px;
+
+  @media (min-width: 720px) {
+    padding-top: 24px;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-column-gap: 45px;
+    max-width: 800px;
+    text-align: left;
+    grid-row-gap: 0;
+    width: 80%;
+    padding: 15vh 0;
+  }
+
+  @media (min-width: 1000px) {
+    width: 100%;
+    grid-template-columns: 135px 550px;
+    grid-column-gap: 60px;
+  }
+`;
+
+export const TechniqueIllustrationContainer = styled(motion.div)`
+  grid-column: 1 / -1;
+  margin: 0 auto;
+
+  @media (min-width: 720px) {
+    height: 0;
+    align-self: start;
+    grid-column: 1 / 2;
+    width: 100%;
+    grid-row: 1;
+  }
+`;
+
+export const TechniqueTitle = styled(motion.h2)`
+  font-family: antique-olive-nord, sans-serif;
+  font-weight: 400;
+  font-weight: normal;
+  font-size: 24px;
+  grid-column: 1 / -1;
+  grid-row: 1;
+
+  @media (min-width: 720px) {
+    text-align: left;
+    grid-column: 2 / -1;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 36px;
+  }
+`;
+
+export const TechniqueStory = styled(motion.article)`
+  grid-column: 1 / -1;
+
+  @media (min-width: 720px) {
+    grid-column: 2 / -1;
+    margin-top: 20px;
+  }
+`;
+
+export const TechniqueStoryItem = styled(motion.p)`
+  line-height: 1.6;
+  font-size: 14px;
+  font-family: input-mono, monospace;
+  font-weight: 300;
+
+  a:link,
+  a:active,
+  a:hover,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  & + & {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 720px) {
+    text-align: left;
+    font-size: 16px;
+  }
 `;
