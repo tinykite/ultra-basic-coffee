@@ -1,5 +1,6 @@
 {
   "plugins": {
-    "postcss-nested": {}
+    "postcss-nested": {},
+		"postcss-inline-svg": {}
   }
 }

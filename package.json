@@ -22,6 +22,7 @@
     "autoprefixer": "^9.7.4",
     "babel-plugin-styled-components": "^1.10.6",
     "parcel-bundler": "^1.12.4",
+    "postcss-inline-svg": "^4.1.0",
     "postcss-nested": "^4.2.1"
   }
 }
