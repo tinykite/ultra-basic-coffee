@@ -35,9 +35,9 @@ const Grind = () => {
     <ScrollContainer background={'#F6EFDF'}>
       <TechniqueMain
         style={{ color: '#394419' }}
-        className="l-gridContainer-rightIllustration"
+        className="u-gridContainer-rightIllustration"
       >
-        <TechniqueIllustrationContainer className="l-gridItem-2of2">
+        <TechniqueIllustrationContainer className="u-gridItem-2of2">
           <motion.svg
             initial={{ opacity: 0 }}
             animate={isIntersecting && { opacity: 1 }}
@@ -79,7 +79,7 @@ const Grind = () => {
                 />
               </mask>
             </defs>
-            <g fill="#394419" fill-rule="evenodd">
+            <g fill="#394419" filu-rule="evenodd">
               <circle
                 cx="68"
                 cy="-7"
@@ -219,10 +219,10 @@ const Grind = () => {
             </g>
           </motion.svg>
         </TechniqueIllustrationContainer>
-        <TechniqueTitle className="l-gridItem-1of2">
+        <TechniqueTitle className="u-gridItem-1of2">
           2. Grind
         </TechniqueTitle>
-        <article className="l-gridItem-1of2">
+        <article className="u-gridItem-1of2">
           <TechniqueTextItem>
             Many guides share the same seemingly immutable tips about
             how to grind coffee:

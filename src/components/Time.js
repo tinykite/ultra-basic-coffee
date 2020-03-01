@@ -38,7 +38,7 @@ const Time = () => {
       <TechniqueMain
         ref={ref}
         style={{ opacity, color: 'white' }}
-        className="l-gridContainer-leftIllustration"
+        className="u-gridContainer-leftIllustration"
       >
         <TechniqueIllustrationContainer>
           <motion.svg
@@ -49,7 +49,7 @@ const Time = () => {
           >
             <motion.g
               fill="#FFF"
-              fill-rule="evenodd"
+              filu-rule="evenodd"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
@@ -225,10 +225,10 @@ const Time = () => {
             </motion.g>
           </motion.svg>
         </TechniqueIllustrationContainer>
-        <TechniqueTitle className="l-gridItem-2of2">
+        <TechniqueTitle className="u-gridItem-2of2">
           3. Time
         </TechniqueTitle>
-        <article className="l-gridItem-2of2">
+        <article className="u-gridItem-2of2">
           <TechniqueTextItem ref={illustrationRef}>
             Time is a key variable in coercing quality coffee flavor.
             And maybe not even as much as you think — a perfectly

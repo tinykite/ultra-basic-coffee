@@ -37,9 +37,9 @@ const Strength = () => {
       <TechniqueMain
         ref={opacityRef}
         style={{ opacity: position, color: 'white' }}
-        className="l-gridContainer-leftIllustration"
+        className="u-gridContainer-leftIllustration"
       >
-        <TechniqueIllustrationContainer className="l-gridItem-1of2">
+        <TechniqueIllustrationContainer className="u-gridItem-1of2">
           <motion.svg width="128" height="204" viewbox="0 0 128 204">
             <defs>
               <mask id="maskTriangleLeft">
@@ -196,10 +196,10 @@ const Strength = () => {
             </motion.g>
           </motion.svg>
         </TechniqueIllustrationContainer>
-        <TechniqueTitle className="l-gridItem-2of2">
+        <TechniqueTitle className="u-gridItem-2of2">
           1. Strength
         </TechniqueTitle>
-        <article className="l-gridItem-2of2">
+        <article className="u-gridItem-2of2">
           <TechniqueTextItem ref={ref}>
             In high school I thought that strong coffee was the kind
             of thing that punched you in the face and made you speak
