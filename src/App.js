@@ -18,7 +18,7 @@ function App() {
       <Aeropress />
       <KalitaWave />
       <FrenchPress />
-      <Interstitial title="Technique" icon="Technique" />
+      <Interstitial title="Basic Technique" icon="Technique" />
       <Strength />
       <Time />
       <Grind />
