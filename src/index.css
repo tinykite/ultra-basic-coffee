@@ -24,9 +24,6 @@
   font-style: normal;
 }
 
-@svg-load coffeeText url(./img/coffeeText.svg) {
-}
-
 body {
   background: #000000;
 }
@@ -74,21 +71,21 @@ p {
 
 .u-gridContainer-leftIllustration {
   @media (min-width: 720px) {
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 143px 1fr;
   }
 
   @media (min-width: 1000px) {
-    grid-template-columns: 135px 550px;
+    grid-template-columns: 143px 550px;
   }
 }
 
 .u-gridContainer-rightIllustration {
   @media (min-width: 720px) {
-    grid-template-columns: 1fr 120px;
+    grid-template-columns: 1fr 143px;
   }
 
   @media (min-width: 1000px) {
-    grid-template-columns: 550px 135px;
+    grid-template-columns: 550px 143px;
   }
 }
 
@@ -106,8 +103,4 @@ p {
   @media (min-width: 720px) {
     grid-column: 2 / -1;
   }
-}
-
-.c-coffeeText {
-  background: svg-inline(coffeeText);
 }
