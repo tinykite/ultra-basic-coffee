@@ -11,7 +11,7 @@ export const TechniqueMain = styled(motion.div)`
   display: grid;
   margin: 0 auto;
   width: 80%;
-  padding-top: 50px;
+  padding: 50px 0;
   text-align: center;
   grid-row-gap: 24px;
 
