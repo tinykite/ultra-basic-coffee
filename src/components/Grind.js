@@ -32,7 +32,7 @@ const Grind = () => {
   });
 
   return (
-    <ScrollContainer background={'#F6EFDF'}>
+    <ScrollContainer background={'#F6EFDF'} className="u-WaveTop">
       <TechniqueMain
         style={{ color: '#394419' }}
         className="u-gridContainer-rightIllustration"

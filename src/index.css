@@ -104,3 +104,23 @@ p {
     grid-column: 2 / -1;
   }
 }
+
+.u-WaveTop {
+  &::before {
+    content: '';
+    display: block;
+    height: 114px;
+    width: 100%;
+    background: svg-load('./img/waveTopInline.svg', fill='black')
+  }
+}
+
+.u-WaveTopBeige {
+  &::before {
+    content: '';
+    display: block;
+    height: 114px;
+    width: 100%;
+    background: svg-load('./img/waveTopInline.svg', fill='#F6EFDF')
+  }
+}
