@@ -14,11 +14,21 @@ function App() {
     <>
       <Hero />
       <Introduction />
-      <Interstitial title="Brew Methods" icon="Tools" />
+      <Interstitial
+        title="Brew Methods"
+        icon="Tools"
+        topWaveBg="#000000"
+        bottomWaveBg="#19224F"
+      />
       <Aeropress />
       <KalitaWave />
       <FrenchPress />
-      <Interstitial title="Basic Technique" icon="Technique" />
+      <Interstitial
+        title="Basic Technique"
+        icon="Technique"
+        topWaveBg="#000000"
+        bottomWaveBg="#000000"
+      />
       <Strength />
       <Time />
       <Grind />

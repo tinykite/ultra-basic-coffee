@@ -3,20 +3,46 @@ import { multiThresholdArray } from '../helpers/animation';
 import { useOnScreen } from '../hooks/useOnScreen';
 import styled from 'styled-components';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
+import waveTop from '../img/waveTop.svg';
+import waveBottom from '../img/waveBottom.svg';
 
 const Main = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   background: white;
-  padding: 8vh 0;
+  margin: 0;
+  padding: calc(8vh + 114px) 0;
+  text-align: center;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 114px;
+    position: absolute;
+    top: 0;
+    background: ${props => props.topWaveBg};
+    -webkit-mask: url(${waveTop}) repeat-x 50% 50%;
+    mask: url(${waveTop}) repeat-x 50% 50%;
+    mask-type: alpha;
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 114px;
+    position: absolute;
+    bottom: 0;
+    background: ${props => props.bottomWaveBg};
+    -webkit-mask: url(${waveBottom}) repeat-x 50% 50%;
+    mask: url(${waveBottom}) repeat-x 50% 50%;
+    mask-type: alpha;
+  }
 
   @media (min-width: 720px) {
-    padding: 14vh 0;
+    padding: calc(14vh + 114px) 0;
   }
 `;
 
@@ -34,7 +60,7 @@ const Title = styled(motion.h2)`
   }
 `;
 
-const Interstitial = ({ title, icon }) => {
+const Interstitial = ({ title, icon, topWaveBg, bottomWaveBg }) => {
   const ref = useRef();
   const onScreen = useOnScreen(ref, multiThresholdArray);
   const { getThreshold } = onScreen;
@@ -42,11 +68,9 @@ const Interstitial = ({ title, icon }) => {
   const position = useMotionValue(0);
   position.set(getThreshold);
 
-  const parallax = useTransform(position, latest => latest * 1.25);
-
   const xRange = [0, 1];
   const driftRange = ['40%', '0%'];
-  const driftUp = useTransform(parallax, xRange, driftRange, {
+  const driftUp = useTransform(position, xRange, driftRange, {
     clamp: false,
   });
 
@@ -60,7 +84,7 @@ const Interstitial = ({ title, icon }) => {
             viewBox="0 0 68 88"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            // style={{ opacity: position, translateY: driftUp }}
+            style={{ opacity: position, translateY: driftUp }}
           >
             <path
               fill-rule="evenodd"
@@ -78,7 +102,7 @@ const Interstitial = ({ title, icon }) => {
             viewBox="0 0 68 88"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            // style={{ opacity: position, translateY: driftUp }}
+            style={{ opacity: position, translateY: driftUp }}
           >
             <path
               fill-rule="evenodd"
@@ -96,7 +120,7 @@ const Interstitial = ({ title, icon }) => {
             viewBox="0 0 68 88"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            // style={{ opacity: position, translateY: driftUp }}
+            style={{ opacity: position, translateY: driftUp }}
           >
             <path
               fill-rule="evenodd"
@@ -113,9 +137,15 @@ const Interstitial = ({ title, icon }) => {
 
   return (
     <>
-      <Main ref={ref}>
+      <Main
+        ref={ref}
+        topWaveBg={topWaveBg}
+        bottomWaveBg={bottomWaveBg}
+      >
         <InterstitialIcon icon={icon} />
-        <Title>{title}</Title>
+        <Title style={{ opacity: position, translateY: driftUp }}>
+          {title}
+        </Title>
       </Main>
     </>
   );
