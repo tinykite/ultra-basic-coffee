@@ -94,7 +94,7 @@ const Interstitial = ({ title, icon, topWaveBg, bottomWaveBg }) => {
             />
           </motion.svg>
         );
-      case 'Next Steps':
+      case 'Tips':
         return (
           <motion.svg
             width="68"

@@ -30,8 +30,14 @@ function App() {
         bottomWaveBg="#000000"
       />
       <Strength />
-      <Time />
       <Grind />
+      <Time />
+      <Interstitial
+        title="Tips & Resources"
+        icon="Tips"
+        topWaveBg="#394419"
+        bottomWaveBg="#2B3257"
+      />
     </>
   );
 }
