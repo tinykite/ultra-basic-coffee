@@ -252,10 +252,10 @@ const Time = () => {
             your coffee game.
           </TechniqueTextItem>
           <TechniqueTextItem>
-            For inspiration, I love checking out the recipes on the
-            World Aeropress Championship website — which catalogues
-            the recipes of each of its top three contenders every
-            year.
+            For inspiration, I love checking out the recipes on the{' '}
+            <a href="https://www.worldaeropresschampionship.com/">
+              World Aeropress Championship website.
+            </a>
           </TechniqueTextItem>
         </article>
       </TechniqueMain>
