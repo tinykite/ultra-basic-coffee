@@ -12,11 +12,10 @@ import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 const Grind = () => {
   const ref = useRef();
-  const illustrationRef = useRef();
-  const onScreen = useOnScreen(ref, multiThresholdArray);
-  const illustrationOnScreen = useOnScreen(illustrationRef, 1);
 
-  const { isIntersecting } = illustrationOnScreen;
+  const onScreen = useOnScreen(ref, multiThresholdArray);
+
+  const { isIntersecting } = onScreen;
   const { getThreshold } = onScreen;
 
   const position = useMotionValue(0);
@@ -34,8 +33,9 @@ const Grind = () => {
   return (
     <ScrollContainer background={'#F6EFDF'} className="u-WaveTop">
       <TechniqueMain
-        style={{ color: '#394419' }}
+        style={{ opacity, color: '#394419' }}
         className="u-gridContainer-rightIllustration"
+        ref={ref}
       >
         <TechniqueIllustrationContainer className="u-gridItem-2of2">
           <motion.svg
@@ -227,7 +227,7 @@ const Grind = () => {
             Many guides share the same seemingly immutable tips about
             how to grind coffee:
           </TechniqueTextItem>
-          <TechniqueTextItem ref={illustrationRef}>
+          <TechniqueTextItem>
             Using a <em>whirly boi</em> (or blade grinder) on your
             beans is garbage. The Baratza Encore is lovely. You'll
             make more flavorful coffee if you avoid pre-ground beans —

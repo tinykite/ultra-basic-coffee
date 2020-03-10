@@ -12,16 +12,16 @@ import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 const Strength = () => {
   const ref = useRef();
-  const illustrationOnScreen = useOnScreen(ref, 1);
-  const { isIntersecting } = illustrationOnScreen;
-
-  const opacityRef = useRef();
+  const illustrationRef = useRef();
 
   const onScreen = useOnScreen(ref, multiThresholdArray);
+
+  const { isIntersecting } = onScreen;
   const { getThreshold } = onScreen;
 
   const position = useMotionValue(0);
   position.set(getThreshold);
+  const opacity = position;
 
   const parallax = useTransform(position, latest => latest * 1.25);
 
@@ -34,12 +34,18 @@ const Strength = () => {
   return (
     <ScrollContainer background={'#000000'}>
       <TechniqueMain
-        ref={opacityRef}
-        style={{ opacity: position, color: 'white' }}
+        ref={ref}
+        style={{ opacity, color: 'white' }}
         className="u-gridContainer-leftIllustration"
       >
         <TechniqueIllustrationContainer className="u-gridItem-1of2">
-          <motion.svg width="128" height="204" viewbox="0 0 128 204">
+          <motion.svg
+            ref={illustrationRef}
+            width="128"
+            height="204"
+            viewbox="0 0 128 204"
+            style={{ overflow: 'hidden', translateY: driftUp }}
+          >
             <defs>
               <mask id="maskTriangleLeft">
                 <rect
