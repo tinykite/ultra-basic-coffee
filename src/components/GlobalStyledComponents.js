@@ -65,7 +65,6 @@ export const TechniqueTitle = styled(motion.h2)`
 export const TechniqueTextItem = styled(motion.p)`
   line-height: 1.6;
   font-size: 14px;
-  font-family: input-mono, monospace;
   font-weight: 300;
 
   @media (min-width: 720px) {
