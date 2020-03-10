@@ -96,13 +96,13 @@ const Hero = () => {
           Ultra Basic<span className="u-visuallyHidden">Coffee</span>
         </HeroTitle>
         <HeroIllustration viewBox="0 0 370 220">
-          <rect width="370" height="220" stroke-width="12" />
+          <rect width="370" height="220" strokeWidth="12" />
           <rect
             x="6"
             y="6"
             width="310"
             height="210"
-            stroke-width="12"
+            strokeWidth="12"
             stroke="currentColor"
             fill="none"
           />
@@ -112,7 +112,7 @@ const Hero = () => {
             x="316"
             y="35"
             stroke="currentColor"
-            stroke-width="12"
+            strokeWidth="12"
             fill="none"
           />
           <motion.rect

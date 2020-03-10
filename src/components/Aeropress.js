@@ -12,6 +12,14 @@ const Main = styled(motion.article)`
   justify-content: center;
   text-align: center;
 
+  @media (max-width: 600px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 720px) {
+    padding-bottom: 100px;
+  }
+
   @media (min-width: 720px) {
     width: 85%;
     grid-template-columns: 1fr 0.5fr;
@@ -136,8 +144,6 @@ const AeroIllustrationItem = styled(motion.svg)`
   }
 `;
 
-const InnerTitleWrapper = styled(motion.div)``;
-
 const Letter = styled(motion.span)`
   display: inline-block;
   line-height: 1em;
@@ -179,8 +185,12 @@ const Aeropress = ({ title = 'Aeropress' }) => {
   };
 
   const wordGroup = title.split('');
-  let letterMarkup = wordGroup.map(item => {
-    return <Letter variants={drip}>{item}</Letter>;
+  let letterMarkup = wordGroup.map((item, index) => {
+    return (
+      <Letter variants={drip} key={index}>
+        {item}
+      </Letter>
+    );
   });
 
   return (
@@ -188,13 +198,13 @@ const Aeropress = ({ title = 'Aeropress' }) => {
       <ScrollContainer ref={ref} background={'#19224f'}>
         <Main>
           <Title fontStack="Barbour" style={{ opacity }}>
-            <InnerTitleWrapper
+            <motion.div
               initial={'start'}
               variants={drips}
               animate={'end'}
             >
               {letterMarkup}
-            </InnerTitleWrapper>
+            </motion.div>
           </Title>
           <Intro>
             The hard-bodied progeny of a manufacturer of frisbee

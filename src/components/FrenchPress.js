@@ -12,10 +12,11 @@ const Main = styled(motion.article)`
   justify-content: center;
   text-align: center;
   position: relative;
-  padding: 5vh 0;
+  padding-top: 50px;
 
   @media (min-width: 500px) {
     width: 80%;
+    padding-top: 10vh;
   }
 
   @media (min-width: 720px) {
@@ -128,7 +129,6 @@ const Illustration = styled(motion.div)`
   height: auto;
   position: relative;
   margin: 0 auto;
-  /* align-self: start; */
   grid-column: 1 / -1;
 
   @media (min-width: 500px) {
@@ -175,7 +175,11 @@ const FrenchPress = () => {
 
   return (
     <>
-      <ScrollContainer ref={ref} background={'#000000'}>
+      <ScrollContainer
+        ref={ref}
+        background={'#000000'}
+        className="u-WaveAsymmetricalPink"
+      >
         <Main>
           <TitleContainer>
             <Title style={{ translateY: driftUp, opacity }}>

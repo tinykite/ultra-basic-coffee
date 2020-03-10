@@ -67,7 +67,10 @@ export const TechniqueTextItem = styled(motion.p)`
   font-size: 14px;
   font-family: input-mono, monospace;
   font-weight: 300;
-  margin-top: 1.6rem;
+
+  @media (min-width: 720px) {
+    margin-top: 1.6rem;
+  }
 
   a:link,
   a:active,

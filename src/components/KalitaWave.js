@@ -13,12 +13,14 @@ const Main = styled.article`
   text-align: center;
   position: relative;
   overflow: hidden;
+  padding: 100px 0;
 
   @media (min-width: 500px) {
     width: 80%;
   }
 
   @media (min-width: 720px) {
+    padding: 0;
     grid-template-columns: 1fr 0.6fr;
     align-content: center; /* Important side effect utilized here: this property also prevent rows from stretching to fill available space! */
     height: 80vh;
@@ -30,6 +32,7 @@ const Main = styled.article`
     grid-template-columns: 550px 1fr;
     max-width: 900px;
     grid-column-gap: 45px;
+    padding-top: 150px;
   }
 `;
 
@@ -100,7 +103,6 @@ const Illustration = styled(motion.div)`
   width: 80%;
   position: relative;
   margin: 0 auto;
-  /* align-self: start; */
   grid-column: 1 / -1;
 
   @media (max-width: 719px) {
@@ -112,7 +114,6 @@ const Illustration = styled(motion.div)`
     grid-column: 2 / -1;
     width: 100%;
     max-width: 283px;
-    /* align-self: start; */
   }
 
   @media (min-width: 1010px) {
@@ -196,7 +197,11 @@ const KalitaWave = () => {
 
   return (
     <>
-      <ScrollContainer ref={ref} background={'#fcf1f2'}>
+      <ScrollContainer
+        ref={ref}
+        background={'#fcf1f2'}
+        className="u-WaveAsymmetricalBlue"
+      >
         <Main>
           <Title style={{ skew, opacity }}>Kalita Wave</Title>
           <Intro>
@@ -256,7 +261,7 @@ const KalitaWave = () => {
                     x="57"
                     y="149"
                     fill="#1B234F"
-                    fill-rule="nonzero"
+                    fillRule="nonzero"
                   />
                   <path
                     fill="#1B234F"
