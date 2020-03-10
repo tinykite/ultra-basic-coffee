@@ -41,7 +41,7 @@ const Tip = styled.div`
 const TipHeading = styled(motion.h2)`
   font-size: 18px;
   color: #ffffff;
-  line-height: 1.5;
+  line-height: 1.6;
   font-family: 'Input Mono Bd';
   font-display: swap;
   font-style: normal;
@@ -49,7 +49,7 @@ const TipHeading = styled(motion.h2)`
 `;
 
 const TipBody = styled(motion.p)`
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 14px;
   color: #ffffff;
   font-weight: 200;

@@ -79,7 +79,7 @@ const Intro = styled.p`
 const Story = styled.p`
   color: #19224f;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 14px;
   grid-column: 1 / 1;
   text-align: center;

@@ -9,6 +9,7 @@ import Strength from './components/Strength';
 import Time from './components/Time';
 import Grind from './components/Grind';
 import Tips from './components/Tips';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         bottomWaveBg="#19224F"
       />
       <Tips />
+      <Footer topWaveBg="#19224F" />
     </>
   );
 }

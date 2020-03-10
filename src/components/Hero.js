@@ -84,7 +84,7 @@ const IntroDescription = styled.p`
   @media (min-width: 720px) {
     font-size: 1.25rem;
     max-width: 560px;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 `;
 

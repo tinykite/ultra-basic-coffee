@@ -102,7 +102,7 @@ const Story = styled(motion.div)`
 `;
 
 const StoryItem = styled(motion.p)`
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 14px;
   color: #ffffff;
   font-weight: 200;
