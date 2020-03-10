@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { multiThresholdArray } from '../helpers/animation';
 import { ScrollContainer } from './GlobalStyledComponents';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue } from 'framer-motion';
 
 const Main = styled(motion.article)`
   width: 80%;
@@ -15,31 +15,15 @@ const Main = styled(motion.article)`
     max-width: 555px;
     text-align: left;
     width: 80%;
-    padding-top: 20vh;
     margin: 0 auto;
+    padding-bottom: 100px;
   }
 `;
 
 const Tip = styled.div`
-  ::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: -40px;
-    height: 24px;
-    width: 24px;
-    background: url('/images/cross.svg');
-    background-size: cover;
-  }
-
   :hover {
     transform: translateY(-5px);
     transition: transform 1s ease-in-out;
-  }
-
-  :hover::before {
-    transform: rotate(45deg);
-    transition: transform 0.25s ease-in-out;
   }
 
   :not(:first-child) {
@@ -92,7 +76,6 @@ const TipBody = styled(motion.p)`
 
 const Tips = () => {
   const ref = useRef();
-  const illustrationRef = useRef();
 
   const onScreen = useOnScreen(ref, multiThresholdArray);
 
@@ -102,18 +85,10 @@ const Tips = () => {
   position.set(getThreshold);
   const opacity = position;
 
-  const parallax = useTransform(position, latest => latest * 1.25);
-
-  const xRange = [0, 1];
-  const driftRange = ['0%', '-15%'];
-  const driftUp = useTransform(parallax, xRange, driftRange, {
-    clamp: false,
-  });
-
   return (
-    <ScrollContainer background={'#F6EFDF'}>
+    <ScrollContainer background={'#19224F'}>
       <Main ref={ref} style={{ opacity }}>
-        <Tip>
+        <Tip className="u-Cross">
           {' '}
           <a href="#">
             <TipHeading>Coffee Basics: Brewing Methods</TipHeading>
@@ -123,7 +98,7 @@ const Tips = () => {
             </TipBody>
           </a>
         </Tip>
-        <Tip>
+        <Tip className="u-Cross">
           <a href="#">
             <TipHeading>Coffee Basics: Brewing Methods</TipHeading>
             <TipBody>
@@ -132,7 +107,7 @@ const Tips = () => {
             </TipBody>
           </a>
         </Tip>
-        <Tip>
+        <Tip className="u-Cross">
           <a href="#">
             <TipHeading>Coffee Basics: Brewing Methods</TipHeading>
             <TipBody>

@@ -8,6 +8,7 @@ import FrenchPress from './components/FrenchPress';
 import Strength from './components/Strength';
 import Time from './components/Time';
 import Grind from './components/Grind';
+import Tips from './components/Tips';
 
 function App() {
   return (
@@ -36,8 +37,9 @@ function App() {
         title="Tips & Resources"
         icon="Tips"
         topWaveBg="#394419"
-        bottomWaveBg="#2B3257"
+        bottomWaveBg="#19224F"
       />
+      <Tips />
     </>
   );
 }
