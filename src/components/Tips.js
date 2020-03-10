@@ -7,16 +7,16 @@ import { motion, useMotionValue } from 'framer-motion';
 
 const Main = styled(motion.article)`
   width: 80%;
-  padding-top: 50px;
+  padding: 0 0 50px;
   text-align: center;
   position: relative;
+  margin: 0 auto;
 
   @media (min-width: 720px) {
     max-width: 555px;
     text-align: left;
     width: 80%;
-    margin: 0 auto;
-    padding-bottom: 100px;
+    padding: 100px 0;
   }
 `;
 
