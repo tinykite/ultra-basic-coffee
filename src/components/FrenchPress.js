@@ -66,7 +66,10 @@ const Title = styled(motion.h2)`
 
 const Intro = styled(motion.p)`
   color: #ffffff;
-  font-style: italic;
+  font-family: 'Input Mono Lt It';
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
   margin-top: 30px;
   font-size: 14px;
   grid-column: 1 / -1;
@@ -99,7 +102,7 @@ const Story = styled(motion.div)`
 `;
 
 const StoryItem = styled(motion.p)`
-  line-height: 1.6;
+  line-height: 1.5;
   font-size: 14px;
   color: #ffffff;
   font-weight: 200;

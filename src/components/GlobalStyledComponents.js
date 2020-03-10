@@ -63,9 +63,23 @@ export const TechniqueTitle = styled(motion.h2)`
 `;
 
 export const TechniqueTextItem = styled(motion.p)`
-  line-height: 1.6;
+  line-height: 1.5;
   font-size: 14px;
   font-weight: 300;
+
+  em {
+    font-family: 'Input Mono Lt It';
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  strong {
+    font-family: 'Input Mono Bd';
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+  }
 
   @media (min-width: 720px) {
     margin-top: 1.6rem;

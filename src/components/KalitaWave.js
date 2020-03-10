@@ -57,7 +57,10 @@ const Title = styled(motion.h2)`
 
 const Intro = styled.p`
   color: #19224f;
-  font-style: italic;
+  font-family: 'Input Mono Lt It';
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
   font-size: 14px;
   grid-column: 1 / 1;
   text-align: center;

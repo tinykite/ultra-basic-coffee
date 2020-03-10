@@ -66,11 +66,14 @@ const Title = styled(motion.h2)`
 
 const Intro = styled.p`
   color: #ffffff;
-  font-style: italic;
   margin-top: 20px;
   font-size: 14px;
   grid-column: 1 / 1;
   text-align: center;
+  font-family: 'Input Mono Lt It';
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
 
   @media (max-width: 719px) {
     grid-row: 2;
