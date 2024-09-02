@@ -159,56 +159,37 @@ const Aeropress = ({ title = 'Aeropress' }) => {
 
   const position = useMotionValue(0);
   position.set(getThreshold);
-  const xRange = [0, 1];
-  const yRange = ['120px', '0px'];
+  // const xRange = [0, 1];
+  // const yRange = ['120px', '0px'];
   const opacity = position;
-  const translateY = useTransform(position, xRange, yRange);
+  // const translateY = useTransform(position, xRange, yRange);
 
   const drips = {
-    start: {
-      opacity: 0,
-    },
-    end: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
+    start: { opacity: 0 },
+    end: { opacity: 1, transition: { staggerChildren: 0.3 } },
   };
 
   const drip = {
     start: { opacity: 0 },
-    end: {
-      opacity: 1,
-      transition: {
-        yoyo: Infinity,
-        duration: 3,
-      },
-    },
+    end: { opacity: 1, transition: { yoyo: Infinity, duration: 3 } },
   };
 
   const wordGroup = title.split('');
-  let letterMarkup = wordGroup.map((item, index) => {
-    return (
-      <Letter variants={drip} key={index}>
-        {item}
-      </Letter>
-    );
-  });
+  const letterMarkup = wordGroup.map((item, index) => (
+    <Letter variants={drip} key={index}>
+      {item}
+    </Letter>
+  ));
 
   return (
     <>
-      <ScrollContainer ref={ref} background={'#19224f'}>
-        <Main>
-          <Title fontStack="Barbour" style={{ opacity }}>
-            <motion.div
-              initial={'start'}
-              variants={drips}
-              animate={'end'}
-            >
-              {letterMarkup}
-            </motion.div>
-          </Title>
+    <ScrollContainer ref={ref} background={'#19224f'}>
+      <Main>
+        <Title fontStack="Barbour" style={{ opacity }}>
+          <motion.div initial="start" animate="end" variants={drips}>
+            {letterMarkup}
+          </motion.div>
+        </Title>
           <Intro>
             The hard-bodied progeny of a manufacturer of frisbee
             lookalikes.
