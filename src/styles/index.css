@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'Barbour';
+  src: url('/fonts/barbour-webfont.woff2') format('woff2'),
+    url('/fonts/barbour-webfont.woff') format('woff'),
+    url('/fonts/barbour-webfont.eot') format('eot'),
+    url('/fonts/barbour-webfont.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Carmin 0.2';
+  src: url('/fonts/Carmin0.2-ExtraBold.eot');
+  src: url('/fonts/Carmin0.2-ExtraBold.woff2') format('woff2'),
+    url('/fonts/Carmin0.2-ExtraBold.woff') format('woff'),
+    url('/fonts/Carmin0.2-ExtraBold.svg') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nostra Sett';
+  src: url('/fonts/Nostrav1.0-Sett.woff2') format('woff2'),
+    url('/fonts/Nostrav1.0-Sett.woff') format('woff'),
+    url('/fonts/Nostrav1.0-Sett.eot') format('eot');
+  font-style: normal;
+}
+
+body {
+  background: #000000;
+}
+
+body,
+section,
+article,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+img,
+svg {
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: 'Input Mono Lt';
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.u-visuallyHidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.u-gridContainer-leftIllustration {
+  @media (min-width: 720px) {
+    grid-template-columns: 143px 1fr;
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 143px 550px;
+  }
+}
+
+.u-gridContainer-rightIllustration {
+  @media (min-width: 720px) {
+    grid-template-columns: 1fr 143px;
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 550px 143px;
+  }
+}
+
+.u-gridItem-1of2 {
+  grid-column: 1 / -1;
+
+  @media (min-width: 720px) {
+    grid-column: 1 / 2;
+  }
+}
+
+.u-gridItem-2of2 {
+  grid-column: 1 / -1;
+
+  @media (min-width: 720px) {
+    grid-column: 2 / -1;
+  }
+}
+
+.u-WaveTop {
+  &::before {
+    content: '';
+    display: block;
+    height: 114px;
+    width: 100%;
+    /* waveTopInline.svg */
+    background: url("data:image/svg+xml,%3Csvg%20width%3D%221440%22%20height%3D%22114%22%20viewBox%3D%220%200%201440%20114%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22black%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M1440%200V114C1289.96%20106.603%201277%2057%201102.99%2057C914.984%2057%20914.984%20114%20726.978%20114C538.98%20114%20538.98%2057%20350.984%2057C171.722%2057%20163.385%20109.102%200%20114V0H1440Z%22%2F%3E%3C%2Fsvg%3E")
+  }
+}
+
+.u-WaveTopBeige {
+  &::before {
+    content: '';
+    display: block;
+    height: 114px;
+    width: 100%;
+    /* waveTopInline.svg */
+    background: url("data:image/svg+xml,%3Csvg%20width%3D%221440%22%20height%3D%22114%22%20viewBox%3D%220%200%201440%20114%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23F6EFDF%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M1440%200V114C1289.96%20106.603%201277%2057%201102.99%2057C914.984%2057%20914.984%20114%20726.978%20114C538.98%20114%20538.98%2057%20350.984%2057C171.722%2057%20163.385%20109.102%200%20114V0H1440Z%22%2F%3E%3C%2Fsvg%3E")
+  }
+}
+
+.u-WaveAsymmetricalBlue {
+  @media(min-width: 1000px) {
+    &::before {
+      content: '';
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      /* KalitaTopWaveRepeating.svg */
+      background: url("data:image/svg+xml,%3Csvg%20width%3D%222565%22%20height%3D%22284%22%20viewBox%3D%220%200%202565%20284%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M-1458%200V56.9585C-1291.97%2056.9589%20-1114.47%2036.3891%20-953.784%2085.9382C-830.257%20124.03%20-701.398%20124.029%20-577.871%2085.9388L-577.87%2085.9385C-420.538%2037.4238%20-299.669%2053.2073%20-181.449%20171.838C-149.55%20203.849%20-117.65%20235.859%20-79.3925%20257.928C-55.4428%20274.344%20-26.143%20284%205.5%20284C37.1431%20284%2066.443%20274.344%2090.3927%20257.927C128.651%20235.859%20160.55%20203.849%20192.449%20171.839L192.45%20171.838C416.229%20-52.7201%20691.376%20160.667%20964.783%2085.9382C1108.95%2046.5342%201261.55%2027.7935%201410%2049C1536.51%2067.0727%201659.96%20114.918%201788.17%20114.918C2016.85%20114.918%202184.45%20-16.9215%202372.55%20171.838L2372.55%20171.84C2404.45%20203.85%202436.35%20235.859%202474.61%20257.928C2498.56%20274.344%202527.86%20284%202559.5%20284C2591.14%20284%202620.44%20274.344%202644.39%20257.927C2682.65%20235.859%202714.55%20203.848%202746.45%20171.838C2864.67%2053.2069%202985.54%2037.4241%203142.87%2085.9385C3266.4%20124.029%203395.26%20124.03%203518.78%2085.9382C3679.47%2036.3891%203856.97%2056.9589%204023%2056.9585V0H-1458Z%22%20fill%3D%22%2319224F%22%2F%3E%3C%2Fsvg%3E") top left repeat-x;
+    }
+  }
+}
+
+.u-WaveAsymmetricalPink {
+  @media (min-width: 1000px) {
+    &::before {
+      content: '';
+      width: 100%;
+      height: 246px;
+      position: absolute;
+      top: -75px;
+      /* KalitaBottomWaveRepeating.svg */
+      background: url("data:image/svg+xml,%3Csvg%20width%3D%222907%22%20height%3D%22246%22%20viewBox%3D%220%200%202907%20246%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2907%200V154.311C2813.02%20154.311%202766.03%20134.854%202719.04%20115.397C2591.43%2062.5596%202460.05%2063.0438%202339.79%20133.477C2222.4%20202.231%202092.44%20204.481%201965.93%20157.735C1838.46%20110.629%201708.65%20112.497%201593.18%20187.5C1575.43%20199.033%201557.68%20210.565%201537.62%20220.526C1476.42%20256.622%201390.22%20255.181%201331.38%20214.795C1315.7%20206.26%201301.26%20196.88%201286.82%20187.5C1238.71%20156.25%201190.6%20125%201096.63%20125C1002.65%20125%20958.358%20141.367%20914.065%20157.735C787.562%20204.481%20657.6%20202.231%20540.21%20133.477C419.951%2063.0438%20288.57%2062.5595%20160.96%20115.397C113.97%20134.854%2066.98%20154.311%20-27%20154.311V0H2907Z%22%20fill%3D%22%23FAF1F2%22%2F%3E%3C%2Fsvg%3E") top left repeat-x;
+    }
+  }
+}
+
+.u-Cross {
+  @media (min-width: 500px) {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -40px;
+      height: 24px;
+      width: 24px;
+      /* cross.svg */
+      background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2030%2031%22%20width%3D%2230%22%20height%3D%2231%22%3E%3Cdefs%2F%3E%3Cg%20fill%3D%22%23fff%22%20fill-rule%3D%22nonzero%22%3E%3Cpath%20d%3D%22M11.5%2030.5h7V.5h-7z%22%2F%3E%3Cpath%20d%3D%22M0%2012v7h30v-7z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-size: cover;
+    }
+  
+    &:hover {
+      transform: translateY(-5px);
+      transition: transform 1s ease-in-out;
+    }
+  
+    &:hover::before {
+      transform: rotate(45deg);
+      transition: transform 0.25s ease-in-out;
+    }
+  }
+}
