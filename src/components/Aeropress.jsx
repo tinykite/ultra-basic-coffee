@@ -159,10 +159,10 @@ const Aeropress = ({ title = 'Aeropress' }) => {
 
   const position = useMotionValue(0);
   position.set(getThreshold);
-  // const xRange = [0, 1];
-  // const yRange = ['120px', '0px'];
+  const xRange = [0, 1];
+  const yRange = ['120px', '0px'];
   const opacity = position;
-  // const translateY = useTransform(position, xRange, yRange);
+  const translateY = useTransform(position, xRange, yRange);
 
   const drips = {
     start: { opacity: 0 },
@@ -171,7 +171,14 @@ const Aeropress = ({ title = 'Aeropress' }) => {
 
   const drip = {
     start: { opacity: 0 },
-    end: { opacity: 1, transition: { yoyo: Infinity, duration: 3 } },
+    end: { 
+      opacity: 1,     
+      transition: {
+      repeat: Infinity,
+      repeatType: "reverse",
+      duration: 3,
+      ease: "easeInOut",
+    }, },
   };
 
   const wordGroup = title.split('');
@@ -185,8 +192,8 @@ const Aeropress = ({ title = 'Aeropress' }) => {
     <>
     <ScrollContainer ref={ref} background={'#19224f'}>
       <Main>
-        <Title fontStack="Barbour" style={{ opacity }}>
-          <motion.div initial="start" animate="end" variants={drips}>
+        <Title fontStack="Barbour" style={{opacity}}>
+        <motion.div initial="start" animate="end" variants={drips}>
             {letterMarkup}
           </motion.div>
         </Title>
