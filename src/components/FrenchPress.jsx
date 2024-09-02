@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import styled from 'styled-components';
 import { multiThresholdArray } from '../helpers/animation';
 import { ScrollContainer } from '../styles/GlobalStyledComponents';
@@ -172,7 +172,7 @@ const FrenchPress = () => {
   const xRange = [0, 1];
   const yRange = ['150px', '-80px'];
   const driftRange = ['100%', '-5%'];
-  const opacity = useTransform(position, [0, 1], [1, 0]);
+  const opacity = position;
   const plungerUp = useTransform(fast, xRange, yRange);
   const driftUp = useTransform(slow, xRange, driftRange);
 
