@@ -23,7 +23,7 @@ const FooterContainer = styled.section`
     height: 114px;
     position: absolute;
     top: 0;
-    background: ${({ $topWaveBg }) => $topWaveBg};
+     background: ${({ $topWaveBg }) => $topWaveBg};
     -webkit-mask: url('/img/waveTop.svg') repeat-x 50% 50%;
     mask: url('/img/waveTop.svg') repeat-x 50% 50%;
     mask-type: alpha;
