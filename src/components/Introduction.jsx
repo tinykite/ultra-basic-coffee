@@ -100,7 +100,7 @@ const Introduction = () => {
 
   return (
     <>
-      <IntroductionScrollContainer ref={ref} background={'#000000'}>
+      <IntroductionScrollContainer ref={ref} $background={'#000000'}>
         <Story>
           <IllustrationItem
             width="104"

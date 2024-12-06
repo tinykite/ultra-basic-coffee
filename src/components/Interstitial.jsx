@@ -139,8 +139,8 @@ const Interstitial = ({ title, icon, topWaveBg, bottomWaveBg }) => {
     <>
       <Main
         ref={ref}
-        topWaveBg={topWaveBg}
-        bottomWaveBg={bottomWaveBg}
+        $topWaveBg={topWaveBg}
+        $bottomWaveBg={bottomWaveBg}
       >
         <InterstitialIcon icon={icon} />
         <Title style={{ opacity: position, translateY: driftUp }}>

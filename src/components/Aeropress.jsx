@@ -190,7 +190,7 @@ const Aeropress = ({ title = 'Aeropress' }) => {
 
   return (
     <>
-    <ScrollContainer ref={ref} background={'#19224f'}>
+    <ScrollContainer ref={ref} $background={'#19224f'}>
       <Main>
         <Title fontStack="Barbour" style={{opacity}}>
         <motion.div initial="start" animate="end" variants={drips}>

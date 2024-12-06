@@ -65,7 +65,7 @@ const FooterColophon = styled(FooterBody)`
 
 const Footer = ({ topWaveBg }) => {
   return (
-    <FooterContainer topWaveBg={topWaveBg}>
+    <FooterContainer $topWaveBg={topWaveBg}>
       <FooterBody>
         Ultra Basic Coffee was created as a silly excuse to mix
         minimalist illustration and maximalist typography.
