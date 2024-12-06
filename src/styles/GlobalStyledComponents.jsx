@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from "motion/react"
 
 export const ScrollContainer = styled.div`
-  background: ${props => props.background};
+  background: ${({ $background }) => $background};
   margin: 0 auto;
   position: relative;
 `;

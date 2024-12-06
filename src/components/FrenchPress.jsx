@@ -184,7 +184,7 @@ const FrenchPress = () => {
   return (
     <ScrollContainer
       ref={ref}
-      background={'#000000'}
+      $background={'#000000'}
       className="u-WaveAsymmetricalPink"
     >
       <Main>

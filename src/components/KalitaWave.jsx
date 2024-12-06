@@ -202,7 +202,7 @@ const KalitaWave = () => {
     <>
       <ScrollContainer
         ref={ref}
-        $background={'#fcf1f2'}
+         $background="#fcf1f2"
         className="u-WaveAsymmetricalBlue"
       >
         <Main>

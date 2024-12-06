@@ -32,7 +32,7 @@ const Strength = () => {
   });
 
   return (
-    <ScrollContainer background={'#000000'}>
+    <ScrollContainer $background={'#000000'}>
       <TechniqueMain
         ref={ref}
         style={{ opacity, color: 'white' }}

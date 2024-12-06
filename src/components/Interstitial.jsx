@@ -23,7 +23,7 @@ const Main = styled.div`
     height: 114px;
     position: absolute;
     top: 0;
-    background: ${props => props.topWaveBg};
+    background: ${({ $topWaveBg }) => $topWaveBg};
     -webkit-mask: url(${waveTop}) repeat-x 50% 50%;
     mask: url(${waveTop}) repeat-x 50% 50%;
     mask-type: alpha;
@@ -35,7 +35,7 @@ const Main = styled.div`
     height: 114px;
     position: absolute;
     bottom: 0;
-    background: ${props => props.bottomWaveBg};
+    background: ${({ $bottomWaveBg }) => $bottomWaveBg};
     -webkit-mask: url(${waveBottom}) repeat-x 50% 50%;
     mask: url(${waveBottom}) repeat-x 50% 50%;
     mask-type: alpha;

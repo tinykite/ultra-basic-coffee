@@ -34,7 +34,7 @@ const Time = () => {
 
   return (
     <ScrollContainer
-      background={'#394419'}
+      $background={'#394419'}
       className="u-WaveTopBeige"
     >
       <TechniqueMain

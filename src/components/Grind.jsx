@@ -31,7 +31,7 @@ const Grind = () => {
   });
 
   return (
-    <ScrollContainer background={'#F6EFDF'} className="u-WaveTop">
+    <ScrollContainer $background={'#F6EFDF'} className="u-WaveTop">
       <TechniqueMain
         style={{ opacity, color: '#394419' }}
         className="u-gridContainer-rightIllustration"
@@ -79,7 +79,7 @@ const Grind = () => {
                 />
               </mask>
             </defs>
-            <g fill="#394419" filu-rule="evenodd">
+            <g fill="#394419" fillRule="evenodd">
               <circle
                 cx="68"
                 cy="-7"

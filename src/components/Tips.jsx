@@ -74,7 +74,7 @@ const TipBody = styled.p`
 
 const Tips = () => {
   return (
-    <ScrollContainer background={'#19224F'}>
+    <ScrollContainer $background='#19224F'>
       <Main>
         <Tip className="u-Cross">
           <a href="https://www.chefsteps.com/activities/how-to-buy-coffee">

@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Hero />
-   <Introduction />  
+      <Introduction />  
       <Interstitial
         title="Brew Methods"
         icon="Tools"
