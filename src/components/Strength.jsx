@@ -8,7 +8,7 @@ import {
 } from '../styles/GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { multiThresholdArray } from '../helpers/animation';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from "motion/react"
 
 const Strength = () => {
   const ref = useRef();

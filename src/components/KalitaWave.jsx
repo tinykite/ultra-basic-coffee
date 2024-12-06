@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useOnScreen } from '../hooks/useOnScreen';
 import { ScrollContainer } from '../styles/GlobalStyledComponents';
 import { multiThresholdArray } from '../helpers/animation';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from "motion/react"
 
 const Main = styled.article`
   width: 90%;

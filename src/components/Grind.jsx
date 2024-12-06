@@ -8,7 +8,7 @@ import {
   TechniqueTitle,
 } from '../styles/GlobalStyledComponents';
 import { useOnScreen } from '../hooks/useOnScreen';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from "motion/react"
 
 const Grind = () => {
   const ref = useRef();

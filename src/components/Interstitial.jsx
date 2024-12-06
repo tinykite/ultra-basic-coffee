@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { multiThresholdArray } from '../helpers/animation';
 import { useOnScreen } from '../hooks/useOnScreen';
 import styled from 'styled-components';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from "motion/react"
 import waveTop from '../img/waveTop.svg';
 import waveBottom from '../img/waveBottom.svg';
 

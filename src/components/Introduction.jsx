@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "motion/react"
 import { useOnScreen } from '../hooks/useOnScreen';
 import { ScrollContainer } from '../styles/GlobalStyledComponents';
 import styled from 'styled-components';
