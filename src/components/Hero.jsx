@@ -23,14 +23,14 @@ const HeroContainer = styled.div`
 `;
 
 const HeroTitle = styled.h1`
-  font-family: 'Knockout 69 A', 'Knockout 69 B';
-  font-style: normal;
+	font-family: 'Druk Web';
+	font-weight: 700;
+	font-style: normal;
   font-size: 70px;
-  font-weight: 400;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 1.82px;
+  letter-spacing: 2px;
   margin: 0;
   padding: 0;
   line-height: 1;

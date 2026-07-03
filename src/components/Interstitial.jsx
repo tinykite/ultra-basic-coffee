@@ -44,10 +44,10 @@ const Main = styled.div`
 `;
 
 const Title = styled(motion.h2)`
-  font-family: 'Knockout 68 A', 'Knockout 68 B';
+	font-family: 'Druk Web';
+	font-weight: 700;
+	font-style: normal;
   font-size: 50px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
   margin-top: 1rem;
